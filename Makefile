@@ -41,6 +41,7 @@ ship: check
 	@[ -z "$$(git status --porcelain)" ] || { echo "Commit your changes first."; exit 1; }
 	@git fetch -q origin && [ "$$(git rev-parse HEAD)" = "$$(git rev-parse @{u})" ] || { echo "Push the branch first: the PR must match what was tested."; exit 1; }
 	@[ "$$(GH_TOKEN=$(GHTOKEN) gh api repos/$(REPO) -q .visibility)" = public ] && GH_TOKEN=$(GHTOKEN) gh api repos/$(REPO)/pages >/dev/null 2>&1 || { echo "The repo is private or Pages is off. Turning them on is Kentaro's call (board inbox portfolio.md, pf-1)."; exit 1; }
+	@[ "$$(GH_TOKEN=$(GHTOKEN) gh api repos/$(REPO)/pages -q .build_type)" = workflow ] || { echo "Pages must deploy from GitHub Actions (Settings, Pages, Source: GitHub Actions), not from a branch."; exit 1; }
 	GH_TOKEN=$(GHTOKEN) gh pr merge $(PR) --repo $(REPO) --squash --delete-branch
 	git checkout -q main && git pull -q --ff-only origin main
 	sha=$$(git rev-parse HEAD); echo "waiting for Pages to serve $$sha"; \
