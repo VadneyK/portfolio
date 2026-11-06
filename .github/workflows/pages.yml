@@ -1,0 +1,30 @@
+name: pages
+# Deploys public/ to GitHub Pages on every push to main. Releases go through `make ship`,
+# which merges the PR and then waits for this deploy (it reads version.txt for the commit).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tests/check_static.py
+      - run: echo "${GITHUB_SHA}" > public/version.txt
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - id: deployment
+        uses: actions/deploy-pages@v4

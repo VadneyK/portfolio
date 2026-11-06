@@ -1,0 +1,13 @@
+name: ci
+# Light gate only: the full nine-width layout check runs locally in `make check`.
+on:
+  pull_request:
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tests/check_static.py

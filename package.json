@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "description": "Kentaro Vadney's portfolio site (static, served from public/ by GitHub Pages)",
+  "scripts": {
+    "check": "make check"
+  },
+  "devDependencies": {
+    "axe-core": "4.14.0"
+  }
+}

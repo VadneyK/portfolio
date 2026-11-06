@@ -1,0 +1,83 @@
+:root {
+  --bg: #fbfaf7;
+  --fg: #1d1d1b;
+  --muted: #55534e;
+  --line: #e2ded5;
+  --card: #ffffff;
+  --accent: #9a3412;
+  --accent-ink: #ffffff;
+  --radius: 10px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151514;
+    --fg: #eeece6;
+    --muted: #b5b1a7;
+    --line: #34322e;
+    --card: #1e1d1b;
+    --accent: #fdba74;
+    --accent-ink: #1d1d1b;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.skip { position: absolute; left: -9999px; top: 0; }
+.skip:focus { left: 12px; top: 12px; background: var(--card); padding: 8px 12px; z-index: 10; }
+
+.top { border-bottom: 1px solid var(--line); }
+.top-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-top: 14px; padding-bottom: 14px; }
+.name { font-weight: 700; color: var(--fg); text-decoration: none; font-size: 1.05rem; }
+.top ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.top nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+.top nav a:hover { color: var(--fg); text-decoration: underline; }
+
+section { padding-top: 40px; padding-bottom: 8px; scroll-margin-top: 16px; }
+.hero { padding-top: 56px; padding-bottom: 16px; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; }
+h2 { font-size: 1.5rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+h3 { font-size: 1.08rem; margin: 0 0 6px; line-height: 1.35; }
+h3 a { color: var(--fg); }
+.lede { font-size: 1.15rem; max-width: 46rem; color: var(--fg); margin: 0 0 20px; }
+.section-note { color: var(--muted); margin: 0 0 18px; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; }
+.btn { display: inline-block; padding: 9px 18px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; }
+.btn:hover { filter: brightness(1.08); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; margin-top: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.card .shot { display: block; border-bottom: 1px solid var(--line); aspect-ratio: 16 / 10; overflow: hidden; background: var(--line); }
+.card .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.card .body { padding: 16px 18px 18px; }
+.card p { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+.list { display: grid; gap: 4px 32px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); margin-top: 14px; }
+.item { padding: 14px 0; border-top: 1px solid var(--line); }
+.item p { margin: 0; color: var(--fg); }
+
+.jobs { list-style: none; padding: 0; margin: 14px 0 0; }
+.jobs li { padding: 16px 0; border-top: 1px solid var(--line); max-width: 52rem; }
+.jobs p { margin: 0; }
+.when { color: var(--muted); font-size: 0.92rem; margin-bottom: 6px !important; }
+.edu { padding-top: 16px; border-top: 1px solid var(--line); max-width: 52rem; }
+
+.small { padding-left: 1.2em; margin: 12px 0 0; }
+.small li { margin: 6px 0; }
+
+.foot { margin-top: 48px; padding-top: 18px; padding-bottom: 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.92rem; }
+.foot p { margin: 4px 0; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
