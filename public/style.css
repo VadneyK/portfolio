@@ -82,9 +82,3 @@ h3 a { color: var(--fg); }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-.sub { margin-top: 22px; }
-.roles { margin: 8px 0 0; padding-left: 20px; }
-.roles li { margin: 6px 0; }
-.essay { margin-top: 10px; }
-.essay h4 { margin: 16px 0 4px; }
-.essay p { max-width: 70ch; }
