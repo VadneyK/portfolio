@@ -81,3 +81,4 @@ h3 a { color: var(--fg); }
 .foot p { margin: 4px 0; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
