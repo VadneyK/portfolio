@@ -16,7 +16,6 @@ The page is one static HTML file per language, with no tracking and no sign-up. 
 - [The Way](https://vadneyk.github.io/the-way/): an open-source pixel art RPG that follows the disciples, played in the browser
 - [Verse Mastery, public edition](https://kvadney-insomniac.github.io/verse-mastery/): spaced-repetition Bible verse memorization with the public-domain King James text. A derived edition: the design and most of the code are not his
 - [Open Word Study](https://vadneyk.github.io/open-word-study-site/): a free tool built from open data that shows how a Greek or Hebrew word is translated in every place it appears
-- [Word of God Workshop (みことば工房)](https://vadneyk.github.io/open-word-study-site/workspace/): a free study workspace with the Greek New Testament and Japanese and English Bibles side by side, with word study. The Japanese to Greek word links are machine-made and not yet checked by hand
 - [Student Job Toolkit](https://vadneyk.github.io/student-job-toolkit/): a free job-search kit for college students and new grads
 
 ## Source code
