@@ -1,0 +1,29 @@
+# Kentaro Vadney: projects and work
+
+> The personal projects page of Kentaro Vadney (バドニー賢太郎), a software engineer. He is Head of Engineering at Veru365 (Founding Engineer from March 2026, Head of Engineering since July 2026). The page lists his live demos, agent tools, hardware projects, writing, ministry tools and work history. Every line on it comes from a project's own README or his resume.
+
+The page is one static HTML file per language, with no tracking and no sign-up. English and Japanese carry the same content. His name in Japanese is written バドニー賢太郎.
+
+## Pages
+
+- [Projects and work, English](https://vadneyk.github.io/portfolio/): the full page
+- [作品と経歴, Japanese](https://vadneyk.github.io/portfolio/ja/): the same page in Japanese
+
+## Live demos
+
+- [How to Find Internships](https://vadneyk.github.io/internships/): a free, searchable guide to internships, paid youth programs, research, volunteering and job shadowing for teens ages 12 to 18
+- [chapter-and-verse](https://vadneyk.github.io/chapter-and-verse/): an agent that writes scripture study plans, and a verifier that checks every factual claim against a public-domain Bible index
+- [The Way](https://vadneyk.github.io/the-way/): an open-source pixel art RPG that follows the disciples, played in the browser
+- [Verse Mastery, public edition](https://kvadney-insomniac.github.io/verse-mastery/): spaced-repetition Bible verse memorization with the public-domain King James text. A derived edition: the design and most of the code are not his
+- [Open Word Study](https://vadneyk.github.io/open-word-study-site/): a free tool built from open data that shows how a Greek or Hebrew word is translated in every place it appears
+- [Student Job Toolkit](https://vadneyk.github.io/student-job-toolkit/): a free job-search kit for college students and new grads
+
+## Source code
+
+- [GitHub profile](https://github.com/VadneyK): source for the projects above
+- [cloud-coder](https://github.com/VadneyK/cloud-coder): queue tasks in YAML and run them through Claude Code, with an audit and fix loop
+- [makerspace-3d](https://github.com/VadneyK/makerspace-3d): a Claude Code plugin for a maker space Bambu Lab X1 Carbon printer
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/in/kentarov): work history

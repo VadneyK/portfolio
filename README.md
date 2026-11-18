@@ -9,7 +9,7 @@ those, and do not add contact details beyond the GitHub and LinkedIn links.
 ## Check and release
 
 ```bash
-make check   # static checks + layout-check at nine widths (320 to 2560) against a local server
+make check   # static checks + search and AI-answer checks (tests/check_seo.py) + layout-check at nine widths (320 to 2560) against a local server
 make ship    # check, merge the open PR, wait for Pages to serve that commit, smoke-test live, revert on failure
 ```
 

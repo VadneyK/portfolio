@@ -1,5 +1,6 @@
 # Release path for vadneyk.github.io/portfolio. `make ship` is the only way to release (see README).
-# make check : static tests + layout-check at nine widths against a local server (free, local)
+# make check : static tests + search and AI-answer checks (tests/check_seo.py) + layout-check at nine
+#              widths against a local server (free, local)
 # make smoke : static tests + layout-check at 375 and 1440 (what CI could run)
 # make ship  : check, then squash-merge the open PR, wait for the Pages deploy of that commit,
 #              smoke-test the live site, and revert the merge if the smoke test fails
@@ -27,6 +28,7 @@ test:
 define local_layout
 	python3 -m http.server $(PORT) -d public >/dev/null 2>&1 & srv=$$!; trap "kill $$srv" EXIT; \
 	for i in $$(seq 1 40); do curl -sf -o /dev/null http://127.0.0.1:$(PORT)/ && break; sleep 0.25; done; \
+	python3 tests/check_seo.py http://127.0.0.1:$(PORT)/ http://127.0.0.1:$(PORT)/ja/ --live-base $(LIVE) && \
 	$(NODE) tests/layout-check.mjs http://127.0.0.1:$(PORT)/ --widths $(1) --out $(OUT)/local
 endef
 
